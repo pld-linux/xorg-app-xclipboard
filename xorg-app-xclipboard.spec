@@ -7,6 +7,8 @@ License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/xclipboard-%{version}.tar.bz2
 # Source0-md5:	2c6ecedb10dc51adbb64c95f22fd99c2
+Source1:	xclipboard.desktop
+Source2:	xclipboard.png
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -41,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/xclipboard.desktop
+install -D %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/xclipboard.png
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -49,4 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/X11/app-defaults/*
+%{_desktopdir}/xclipboard.desktop
+%{_pixmapsdir}/xclipboard.png
 %{_mandir}/man1/*.1x*

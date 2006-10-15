@@ -2,10 +2,10 @@ Summary:	xclipboard application
 Summary(pl):	Aplikacja xclipboard
 Name:		xorg-app-xclipboard
 Version:	1.0.1
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/xclipboard-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/xclipboard-%{version}.tar.bz2
 # Source0-md5:	2c6ecedb10dc51adbb64c95f22fd99c2
 Source1:	xclipboard.desktop
 Source2:	xclipboard.png
@@ -52,8 +52,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_datadir}/X11/app-defaults/*
+%attr(755,root,root) %{_bindir}/xclipboard
+%attr(755,root,root) %{_bindir}/xcutsel
+%{_datadir}/X11/app-defaults/XClipboard
 %{_desktopdir}/xclipboard.desktop
 %{_pixmapsdir}/xclipboard.png
-%{_mandir}/man1/*.1x*
+%{_mandir}/man1/xclipboard.1x*
+%{_mandir}/man1/xcutsel.1x*

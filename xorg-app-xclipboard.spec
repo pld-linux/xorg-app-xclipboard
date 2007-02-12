@@ -1,5 +1,5 @@
 Summary:	xclipboard application
-Summary(pl):	Aplikacja xclipboard
+Summary(pl.UTF-8):   Aplikacja xclipboard
 Name:		xorg-app-xclipboard
 Version:	1.0.1
 Release:	1
@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xclipboard application.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacja xclipboard.
 
 %prep

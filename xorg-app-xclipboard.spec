@@ -1,5 +1,5 @@
 Summary:	xclipboard application
-Summary(pl.UTF-8):   Aplikacja xclipboard
+Summary(pl.UTF-8):	Aplikacja xclipboard
 Name:		xorg-app-xclipboard
 Version:	1.0.1
 Release:	1

@@ -2,13 +2,14 @@ Summary:	xclipboard application
 Summary(pl.UTF-8):	Aplikacja xclipboard
 Name:		xorg-app-xclipboard
 Version:	1.0.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xclipboard-%{version}.tar.bz2
 # Source0-md5:	2c6ecedb10dc51adbb64c95f22fd99c2
 Source1:	xclipboard.desktop
 Source2:	xclipboard.png
+Patch0:		%{name}-xaw.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -27,6 +28,7 @@ Aplikacja xclipboard.
 
 %prep
 %setup -q -n xclipboard-%{version}
+%patch0 -p1
 
 %build
 %{__aclocal}

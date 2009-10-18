@@ -1,34 +1,40 @@
-Summary:	xclipboard application
-Summary(pl.UTF-8):	Aplikacja xclipboard
+Summary:	xclipboard application - X clipboard client
+Summary(pl.UTF-8):	Aplikacja xclipboard - klient schowka X
 Name:		xorg-app-xclipboard
-Version:	1.0.1
-Release:	3
+Version:	1.1.0
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xclipboard-%{version}.tar.bz2
-# Source0-md5:	2c6ecedb10dc51adbb64c95f22fd99c2
+# Source0-md5:	113eccea3ee73a1ef7b43d2291ca1e09
 Source1:	xclipboard.desktop
 Source2:	xclipboard.png
-Patch0:		%{name}-xaw.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-lib-libxkbfile-devel
+BuildRequires:	xorg-util-util-macros >= 1.3
 Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xclipboard application.
+xclipboard application is used to collect and display text selections
+that are sent to the CLIPBOARD by other clients. It is typically used
+to save CLIPBOARD selections for later use. It stores each CLIPBOARD
+selection as a separate string, each of which can be selected.
 
 %description -l pl.UTF-8
-Aplikacja xclipboard.
+Aplikacja xclipboard służy do zbierania i wyświetlania zaznaczeń
+tekstu wysyłanych przez innych klientów do schowka (CLIPBOARD). Zwykle
+jest używana do zapisywania zaznaczeń schowka w celu późniejszego
+użycia. Zapisuje każde zaznaczenie jako osobny łańcuch znaków, z
+których każdy może być wybrany.
 
 %prep
 %setup -q -n xclipboard-%{version}
-%patch0 -p1
 
 %build
 %{__aclocal}
@@ -53,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/xclipboard
 %attr(755,root,root) %{_bindir}/xcutsel
 %{_datadir}/X11/app-defaults/XClipboard

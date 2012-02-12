@@ -15,10 +15,10 @@ BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXmu-devel
-BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
+BuildRequires:	xorg-lib-libXt-devel >= 1.1
 BuildRequires:	xorg-lib-libxkbfile-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-Requires:	xorg-lib-libXt >= 1.0.0
+Requires:	xorg-lib-libXt >= 1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

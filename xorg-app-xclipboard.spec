@@ -66,5 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/X11/app-defaults/XClipboard
 %{_desktopdir}/xclipboard.desktop
 %{_pixmapsdir}/xclipboard.png
-%{_mandir}/man1/xclipboard.1x*
-%{_mandir}/man1/xcutsel.1x*
+%{_mandir}/man1/xclipboard.1*
+%{_mandir}/man1/xcutsel.1*

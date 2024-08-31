@@ -1,12 +1,12 @@
 Summary:	xclipboard application - X clipboard client
 Summary(pl.UTF-8):	Aplikacja xclipboard - klient schowka X
 Name:		xorg-app-xclipboard
-Version:	1.1.4
+Version:	1.1.5
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://xorg.freedesktop.org/releases/individual/app/xclipboard-%{version}.tar.xz
-# Source0-md5:	859712d44bbc024a0fb21efc703d8ce0
+# Source0-md5:	bd1f3e1c8b3a94818f2ccef835dab760
 Source1:	xclipboard.desktop
 Source2:	xclipboard.png
 URL:		https://xorg.freedesktop.org/
@@ -14,10 +14,12 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	tar >= 1:1.22
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.1
 BuildRequires:	xorg-lib-libxkbfile-devel
+BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xz
 Requires:	xorg-lib-libXt >= 1.1
